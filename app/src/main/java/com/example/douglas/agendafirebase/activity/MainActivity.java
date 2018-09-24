@@ -1,7 +1,9 @@
-package com.example.douglas.agendafirebase;
+package com.example.douglas.agendafirebase.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.douglas.agendafirebase.R;
 
 public class MainActivity extends AppCompatActivity {
 
