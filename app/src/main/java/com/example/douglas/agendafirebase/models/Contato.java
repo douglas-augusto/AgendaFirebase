@@ -1,5 +1,9 @@
 package com.example.douglas.agendafirebase.models;
 
+import com.example.douglas.agendafirebase.config.ConfiguracaoFirebase;
+import com.example.douglas.agendafirebase.helper.Base64Custom;
+import com.google.firebase.database.DatabaseReference;
+
 public class Contato {
 
     private String id;
@@ -8,6 +12,15 @@ public class Contato {
     private String email;
 
     public Contato() {
+    }
+
+    public void salvarContato(){
+
+        String emailCodificado = Base64Custom.codificarBase64(getEmail());
+
+        DatabaseReference referenciaFirebase = ConfiguracaoFirebase.getFirebase();
+        referenciaFirebase.child("contatos").child(getId()).child(emailCodificado).setValue(this);
+
     }
 
     public String getNome() {

@@ -12,11 +12,11 @@
         android:id="@+id/campoEmailLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimaryDark"
-        android:hint="email"
-        android:layout_centerVertical="true"
+        android:layout_above="@+id/campoSenhaLogin"
         android:ems="10"
-        android:inputType="textEmailAddress" />
+        android:hint="email"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/colorPrimaryDark" />
 
     <EditText
         android:id="@+id/campoSenhaLogin"

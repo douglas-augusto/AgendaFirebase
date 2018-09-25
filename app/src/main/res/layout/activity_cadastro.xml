@@ -6,35 +6,35 @@
     android:layout_height="match_parent"
     android:layout_marginLeft="15dp"
     android:layout_marginRight="15dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="15dp"
     tools:context=".activity.CadastroActivity">
 
     <EditText
         android:id="@+id/campoEmailCadastro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimaryDark"
-        android:hint="email"
-        android:layout_centerVertical="true"
+        android:layout_alignParentTop="true"
         android:ems="10"
-        android:inputType="textEmailAddress" />
+        android:hint="email"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/colorPrimaryDark" />
 
     <EditText
         android:id="@+id/campoSenhaCadastro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="senha"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="166dp"
+        android:layout_below="@+id/campoEmailCadastro"
         android:ems="10"
-        android:inputType="textPassword" />
+        android:hint="senha"
+        android:inputType="textPassword"
+        android:textColor="@color/colorPrimaryDark" />
 
     <Button
         android:id="@+id/botaoCadastrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="104dp"
         android:text="cadastrar" />
 
 </RelativeLayout>

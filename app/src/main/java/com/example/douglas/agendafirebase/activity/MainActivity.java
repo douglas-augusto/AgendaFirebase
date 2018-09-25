@@ -45,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.item_sair :
                 deslogarUsuario();
                 return true;
+            case R.id.item_add :
+                Intent intent = new Intent(MainActivity.this, NovoContatoActivity.class);
+                startActivity(intent);
             default:
                 return super.onOptionsItemSelected(item);
         }
