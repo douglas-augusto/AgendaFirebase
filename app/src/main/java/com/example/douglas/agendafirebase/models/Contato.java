@@ -3,6 +3,7 @@ package com.example.douglas.agendafirebase.models;
 import com.example.douglas.agendafirebase.config.ConfiguracaoFirebase;
 import com.example.douglas.agendafirebase.helper.Base64Custom;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.Exclude;
 
 public class Contato {
 
@@ -47,6 +48,7 @@ public class Contato {
         this.email = email;
     }
 
+    @Exclude
     public String getId() {
         return id;
     }
