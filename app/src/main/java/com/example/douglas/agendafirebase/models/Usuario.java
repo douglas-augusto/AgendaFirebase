@@ -1,5 +1,8 @@
 package com.example.douglas.agendafirebase.models;
 
+import com.example.douglas.agendafirebase.config.ConfiguracaoFirebase;
+import com.google.firebase.database.DatabaseReference;
+
 public class Usuario {
 
     private String id;
@@ -7,6 +10,11 @@ public class Usuario {
     private String senha;
 
     public Usuario() {
+    }
+
+    public void salvar(){
+        DatabaseReference referenciaFirebase = ConfiguracaoFirebase.getFirebase();
+        referenciaFirebase.child("usuarios").child(getId()).setValue(this);
     }
 
     public String getId() {
