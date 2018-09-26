@@ -41,8 +41,8 @@ public class ContatosAdapter extends ArrayAdapter<Contato> {
             TextView telefoneContato = (TextView) view.findViewById(R.id.tv_telefone);
 
             Contato contato = contatos.get(position);
-            nomeContato.setText("Nome: "+contato.getNome());
-            telefoneContato.setText("Telefone: "+contato.getTelefone());
+            nomeContato.setText(contato.getNome());
+            telefoneContato.setText("Fone: "+contato.getTelefone());
 
         }
 
