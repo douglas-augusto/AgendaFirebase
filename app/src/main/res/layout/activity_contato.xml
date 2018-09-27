@@ -6,8 +6,52 @@
     android:layout_height="match_parent"
     android:layout_marginLeft="15dp"
     android:layout_marginRight="15dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="15dp"
     tools:context=".activity.ContatoActivity">
 
+    <EditText
+        android:id="@+id/campoNomeContatoExibir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/colorPrimaryDark"
+        android:hint="Nome" />
 
+    <EditText
+        android:id="@+id/campoTelefoneContatoExibir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/campoNomeContatoExibir"
+        android:ems="10"
+        android:inputType="phone"
+        android:textColor="@color/colorPrimaryDark"
+        android:hint="Telefone"/>
+
+    <EditText
+        android:id="@+id/campoEmailContatoExibir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/campoTelefoneContatoExibir"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/colorPrimaryDark"
+        android:hint="Email"/>
+
+    <Button
+        android:id="@+id/botaoAlterarContato"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/botaoApagarContato"
+        android:text="Salvar" />
+
+    <Button
+        android:id="@+id/botaoApagarContato"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Apagar" />
 
 </RelativeLayout>

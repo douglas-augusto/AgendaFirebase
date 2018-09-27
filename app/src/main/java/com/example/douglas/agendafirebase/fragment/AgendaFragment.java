@@ -1,16 +1,19 @@
 package com.example.douglas.agendafirebase.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.douglas.agendafirebase.R;
+import com.example.douglas.agendafirebase.activity.ContatoActivity;
 import com.example.douglas.agendafirebase.adapter.ContatosAdapter;
 import com.example.douglas.agendafirebase.config.ConfiguracaoFirebase;
 import com.example.douglas.agendafirebase.helper.Preferencias;
@@ -93,6 +96,24 @@ public class AgendaFragment extends Fragment {
 
             }
         };
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Intent intent = new Intent(getActivity(), ContatoActivity.class);
+
+                // recupera dados a serem passados
+                Contato contato = contatos.get(position);
+
+                intent.putExtra("nome", contato.getNome() );
+                intent.putExtra("email", contato.getEmail() );
+                intent.putExtra("telefone", contato.getTelefone());
+
+                startActivity(intent);
+
+            }
+        });
 
         return view;
 
